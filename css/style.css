@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'Book-Font';  
+  src: url('../fonts/whitneybook.otf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Light-Font';  
+  src: url('../fonts/whitneylight.otf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Medium-Font';  
+  src: url('../fonts/whitneymedium.otf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Semibold-Font';  
+  src: url('../fonts/whitneysemibold.otf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Bold-Font';  
+  src: url('../fonts/whitneybold.otf')  format('truetype');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  color: #373e4d;
+}
+
+p, h2, a, span, li, .pill-tag, label, input {
+  font-family: 'Book-Font', sans-serif !important;
+}
+
+h1{
+  font-family: 'Semibold-Font', sans-serif;
+}
+
+.bold {
+  font-family: 'Bold-Font', sans-serif !important;
+}
+
+.semibold {
+  font-family: 'Semibold-Font', sans-serif;
+}
+
+
+.medium {
+  font-family: 'Medium-Font', sans-serif !important;
+}
+
+button {
+  font-family: 'Light-Font', sans-serif;
+}
+
+#whereAvailable svg{
+  stroke: #4338ca;   
+}
+
+
+.size-normal {
+  font-size: 16px;
+}
+
+@media (max-width: 576px) {
+  .content {
+      padding-top: 51px;
+  }
+}
+
+@media (min-width: 577px) {
+.pt-scroll {
+  padding-top: 51px;
+}
+
+.nav-sticky {
+  position: -webkit-sticky;
+  position: sticky !important;
+  min-width: 100%;
+  top: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+  transition: all .25s ease-in;
+  z-index: 1;
+}
+}
+
+/* HAMBURGER MENU */
+
+.hamburger {
+cursor: pointer;
+width: 48px;
+height: 48px;
+transition: all 0.25s;
+}
+
+.hamburger__top-bun,
+.hamburger__bottom-bun {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: white;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger_red-top {
+  transform: translateY(-5px) !important;
+}
+
+.hamburger_red-bottom {
+  transform: translateY(3px) !important;
+}
+
+.hamburger_red-top, .hamburger_red-bottom {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  transform: rotate(0);
+  transition: all 0.5s;
+  background: var(--current);
+}
+
+.hamburger:hover [class*="-bun"] {
+background: gray;
+}
+
+.hamburger__top-bun {
+transform: translateY(-5px);
+}
+
+.hamburger__bottom-bun {
+transform: translateY(3px);
+}
+
+.open {
+transform: rotate(90deg);
+transform: translateY(-1px);
+}
+
+.open .hamburger__top-bun {
+transform:
+  rotate(45deg)
+  translateY(0px);
+}
+
+.open .hamburger__bottom-bun {
+transform:
+  rotate(-45deg)
+  translateY(0px);
+}
+
+.hamburger__top-bu, .hamburger__bottom-bu {
+  background: black !important;
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;  
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger__top-bu{
+  transform: translateY(-5px);
+}
+  
+.hamburger__bottom-bu {
+  transform: translateY(3px);
+}
