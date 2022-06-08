@@ -28,23 +28,15 @@
         gtag('config', 'G-SCZXC6HDLN');
         </script>                  
     </head> 
-    <body class="h-screen bg-indigo-100">	        
-        <!--<header id="header" class="w-full bg-transparent top-0 left-0 z-50">
-            <div class="container mx-auto flex flex-wrap px-5 py-4 md:py-8 xl:px-24 md:px-8 md:flex-row items-center">
-                <a href="/" class="flex font-medium items-center text-gray-900 md:mb-0 sm:self-start">
-                    <img class="hidden lg:w-16 xs:w-4" id="logo-red" src="img/full-logo.png">
-                    <h1 class="text-4xl bold text-indigo-700">frankly.gg 🕵🏻</h1>
-                </a>                            
-            </div>
-        </header> -->              
+    <body class="h-screen bg-indigo-100">	                         
         <section class="text-gray-800">                 
             <div class="container mx-auto flex pt-10 md:pt-20 px-5 xl:px-24 md:px-8 md:flex-row flex-col items-center">                 
                 <div class="w-full md:w-2/4 sm:w-full self-start">
-                    <h1 class="text-3xl semibold text-gray-700 mb-3 md:mb-4">frankly.gg 🕵🏻</h1>
+                    <h1 class="text-3xl semibold text-gray-700 mb-3 md:mb-4">frankly 🕵🏻</h1>
                     <h2 class="text-4xl md:text-5xl tracking-tight md:tracking-normal bold leading-tight mb-3 text-indigo-700">Know what data you're giving to the companies before signing up</h2>                    
                     <p class="text-xl text-indigo-500 mb-3 semibold">Understand in simple words what data you're accepting to give and find a better alternative to that site</p>                                        
                     <div class="flex flex-row md:items-center mb-3" id="whereAvailable">
-                        <p class="bold text-indigo-700 text-lg">Frankly will be available for Chrome , Firefox and Safari</p>
+                        <p class="bold text-indigo-700 text-lg">Frankly is available for Chrome , Firefox and Safari</p>
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon mx-1 icon-tabler icon-tabler-brand-chrome" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">                            
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                             <circle cx="12" cy="12" r="9"></circle>
@@ -64,18 +56,64 @@
                             <circle cx="12" cy="12" r="9"></circle>
                         </svg>                        
                     </div>
-                    <!--<h1 class="text-5xl bold text-right text-indigo-700 mr-20">try it</h1>                                        
-                    <img src="img/arrow.svg" class="w-1/4 float-right">-->
-                    <input class="w-full bg-white h-12 border mb-3 pl-4 rounded-md" placeholder="frankly@name.com" type="text" name="email">
-                    <button class="button bg-indigo-700 transition duration-150 ease-out hover:ease-in hover:bg-indigo-800 text-white semibold w-full px-4 py-3 rounded-md text-lg">Join the Waiting List</button>
+                    <form id="form-post" action="#" method="POST" class="flex flex-wrap">
+                        <!--<h1 class="text-5xl bold text-right text-indigo-700 mr-20">try it</h1>                                        
+                        <img src="img/arrow.svg" class="w-1/4 float-right">-->
+                        <input class="w-full bg-white h-12 border mb-3 pl-4 semibold rounded-md" id="email" placeholder="frankly@name.com" type="email" name="email">
+                        <button type="submit" onclick="toggleModal('modal-id')" class="button bg-indigo-700 transition duration-150 ease-out hover:ease-in hover:bg-indigo-800 text-white semibold w-full px-4 py-3 rounded-md text-lg">Request access</button>
+                        <div class="hidden overflow-x-hidden overflow-y -auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="fail-form">
+                            <div class="relative w-6/6 md:w-4/6 my-6 mx-auto max-w-3xl">
+                                <!--content-->
+                                <div class="border-0 rounded-lg shadow-lg bg-white relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                                    <!--header-->
+                                    <div class="flex px-5 py-5">
+                                        <h3 class="text-lg bold text-center text-indigo-700">
+                                        Ups! you have to fill the form with your email 🙈
+                                        </h3>
+                                        <button class="ml-auto bg-transparent float-right leading-none font-semibold outline-none focus:outline-none" onclick="toggleModal('modal-id')">
+                                            <span class="text-indigo-700 block outline-none focus:outline-none">
+                                                Close
+                                            </span>
+                                        </button>
+                                    </div>                                                                 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden transition overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="success-form">
+                            <div class="relative w-6/6 md:w-4/6 my-6 mx-auto max-w-3xl">
+                                <!--content-->
+                                <div class="border-0 rounded-lg shadow-lg bg-white relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                                    <!--header-->
+                                    <div class="flex mx-auto px-5 pt-5 mb-4">
+                                        <h3 class="text-lg bold mb-4 text-center text-indigo-700">
+                                            Thank you! 
+                                        </h3>                                        
+                                        <!--<button class="ml-auto bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none" onclick="toggleModal('modal-id')">
+                                            <span class="text-white h-6 w-6 text-2xl block outline-none focus:outline-none">
+                                                ×
+                                            </span>
+                                        </button>-->
+                                    </div>
+                                    <p class="text-center text-indigo-700 font-sm px-5 text-lg">
+                                        Thanks for your interes on Frankly, we gonna send you an email once we release our beta
+                                    </p>                                                                 
+                                    <a href="/" class="text-center text-indigo-400 underline my-8">Go back to Home</a>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="hidden opacity-70 fixed inset-0 z-40 bg-black" id="fail-form-backdrop"></div>
+                        <div class="hidden opacity-70 fixed inset-0 z-40 bg-black" id="success-form-backdrop"></div> 
+                    </form>
                 </div> 
                 <div class="w-full mt-8 md:mt-0 md:w-2/4 ml-14 self-end sm:w-full rounded-md">                    
-                   <img src="img/widget-sm.png" class="w-full">
-                </div>                     
+                    <div style="padding:113.11% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/718243759?h=2dc2bfe5f8&autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                </div>                                   
             </div>                                 
-        </section>   
+        </section>           
         <footer class="py-6 md:py-0 md:mt-14">
             <p class="text-center text-indigo-400">Frankly Labs, 2022. Made in Bali</p>
         </footer>         
     </body> 
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="js/saveData.js"></script>   
 </html>
