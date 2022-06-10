@@ -1,25 +1,24 @@
 'use strict';
 
 const form = document.querySelector('#form-post');
-
 const email = form.querySelector('#email');
 
 const config = {
-    apiKey: "AIzaSyDPdB0RgCu71-KTvMEihpJpqD6ytcAdfoc",
-    authDomain: "nomadhouse-dcc5d.firebaseapp.com",
-    projectId: "nomadhouse-dcc5d",
+    apiKey: "AIzaSyBokEehcl1lHlB7tozPq1DxLQdNMNpzKpg",
+    authDomain: "frankly-gg.firebaseapp.com",
+    projectId: "frankly-gg",
     storageBucket: "nomadhouse-dcc5d.appspot.com",
-    messagingSenderId: "682037132934",
-    appId: "1:682037132934:web:d4f4e5f6b397dfb644db07",
-    measurementId: "G-917ZMEV2DV",
-    databaseURL: "https://nomadhouse-dcc5d-default-rtdb.firebaseio.com/",
-    storageBucket: "nomadhouse-dcc5d.appspot.com"
+    messagingSenderId: "28513870358",
+    appId: "1:28513870358:web:5d9f8729c138cf15604b37",
+    measurementId: "G-NKXYVZ0CBC",
+    databaseURL: "https://frankly-gg-default-rtdb.asia-southeast1.firebasedatabase.app",
+    storageBucket: "frankly-gg.appspot.com"
 };
 
 firebase.initializeApp(config);
 
 var actionCodeSettings = {
-    url: 'https://www.mynomadhouse.com',
+    url: 'https://frankly.gg',
     handleCodeInApp: true 
 };
 
